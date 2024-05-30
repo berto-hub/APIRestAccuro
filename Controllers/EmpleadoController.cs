@@ -49,19 +49,27 @@ namespace APIAccuro.Controllers
         public async Task<ActionResult<Empleado>> GetEmpleadoById(int id){
             var empleado = await _context.Empleados.FindAsync(id);
             
-            if(empleado == null){
-                return NotFound();
-            }
+            try{
+                if(empleado == null){
+                    return NotFound();
+                }
 
-            return empleado;
+                return Ok(empleado);
+            }catch{
+                return BadRequest("Error");
+            }
         }
 
         [HttpPost]      
         public async Task<ActionResult<Empleado>> PostEmpleados(Empleado empleado){
-            _context.Add(empleado);
-            await _context.SaveChangesAsync();
+            try{
+                _context.Add(empleado);
+                await _context.SaveChangesAsync();
 
-            return new CreatedAtRouteResult("GetEmpleadoId", new {id = empleado.Id}, empleado);
+                return new CreatedAtRouteResult("GetEmpleadoId", new {id = empleado.Id}, empleado);
+            }catch{
+                return BadRequest("Error");
+            }
         }
         
     }

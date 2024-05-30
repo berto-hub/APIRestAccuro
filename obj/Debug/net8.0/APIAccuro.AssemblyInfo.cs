@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIAccuro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f6e4ef8b534d3e6145f11b755e4351ce7a9e52d")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIAccuro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIAccuro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
